@@ -1,0 +1,127 @@
+body {
+    background-color: #000;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #1a1a1a;
+    border: 2px solid #ff0000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff0000;
+}
+
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ff0000;
+    background-color: #333;
+    color: #eee;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #cc0000;
+}
+
+button:disabled {
+    background-color: #660000;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.message.success {
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+.message.error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.log-container {
+    background-color: #1a1a1a;
+    border: 2px solid #ff0000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    width: 350px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.log-area {
+    background-color: #222;
+    border: 1px solid #660000;
+    padding: 10px;
+    min-height: 100px;
+    color: #eee;
+    text-align: left;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.log-entry.success {
+    color: #00ff00;
+}
+
+.log-entry.error {
+    color: #ff0000;
+}
