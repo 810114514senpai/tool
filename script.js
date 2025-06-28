@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSendCount = 0;
     let abortController = null;
 
-
     function addLog(message, type = '') {
         const logEntry = document.createElement('div');
         logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             logArea.removeChild(logArea.lastChild);
         }
     }
-
 
     function updateButtonState() {
         startButton.disabled = isSending;
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 const result = await response.json(); 
-                addLog(`[+] ${email}… ${response.status} `, 'success');
+                addLog(`[+] ${email}… ${response.status}`, 'success');
                 return true; 
             } else {
                 const errorText = await response.text();
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function startSending() {
         if (isSending) return; 
 
-        const totalSendCount = parseInt(sendCountInput.value, 10000000);
+        const totalSendCount = parseInt(sendCountInput.value, 10); 
         if (isNaN(totalSendCount) || totalSendCount <= 0) {
             responseMessage.textContent = '送信回数を指定してください';
             responseMessage.classList.add('error');
@@ -93,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentSendCount++;
             addLog(`送信 #${currentSendCount}/${totalSendCount}...`);
 
-
             if (!isSending) {
                 addLog('送信が停止されました。');
                 break;
@@ -101,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const success = await sendEmail();
             
-
-           )
             await new Promise(resolve => setTimeout(resolve, 10));
         }
 
@@ -131,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', startSending);
     stopButton.addEventListener('click', stopSending);
-
 
     updateButtonState();
 });
