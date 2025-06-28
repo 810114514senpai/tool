@@ -8,64 +8,74 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    font-size: 0.9em;
 }
 
 .container {
     background-color: #1a1a1a;
     border: 2px solid #ff0000;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    width: 350px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    width: 300px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 h1, h2 {
     color: #ff0000;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     color: #ff0000;
 }
 
 input[type="email"],
 input[type="number"] {
-    width: calc(100% - 10px);
-    padding: 8px;
+    width: calc(100% - 6px);
+    padding: 6px;
     border: 1px solid #ff0000;
     background-color: #333;
     color: #eee;
     border-radius: 4px;
+    font-size: 0.9em;
 }
+
+/* placeholderのスタイルを追加 */
+input::placeholder {
+    color: #aaa; /* 薄いグレー */
+    opacity: 1; /* Firefoxでのデフォルトの透明度を上書き */
+}
+
 
 .button-group {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 button {
     background-color: #ff0000;
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 0.9em;
     transition: background-color 0.3s ease;
     flex-grow: 1;
-    margin: 0 5px;
+    margin: 0 4px;
 }
 
 button:hover:not(:disabled) {
@@ -78,10 +88,11 @@ button:disabled {
 }
 
 .message {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 15px;
+    padding: 8px;
     border-radius: 4px;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 .message.success {
@@ -97,25 +108,26 @@ button:disabled {
 .log-container {
     background-color: #1a1a1a;
     border: 2px solid #ff0000;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    width: 350px;
-    max-height: 300px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    width: 300px;
+    max-height: 250px;
     overflow-y: auto;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .log-area {
     background-color: #222;
     border: 1px solid #660000;
-    padding: 10px;
-    min-height: 100px;
+    padding: 8px;
+    min-height: 80px;
     color: #eee;
     text-align: left;
     font-family: monospace;
     white-space: pre-wrap;
     word-wrap: break-word;
+    font-size: 0.8em;
 }
 
 .log-entry.success {
